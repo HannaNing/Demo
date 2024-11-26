@@ -10,12 +10,6 @@ export default class AdminMenuPage {
     readonly adminMenu: Locator;
     readonly addBtn: Locator;
     readonly userRole: Locator;
-    readonly jobMenu: Locator;
-    readonly jobTitles: Locator;
-    readonly addJobTitleBtn: Locator;
-    readonly jobTitleInput: Locator;
-    readonly saveJobTitleBtn: Locator;
-    
 
     constructor(page: Page) {
         this.page = page;
@@ -25,14 +19,6 @@ export default class AdminMenuPage {
         this.adminMenu = page.locator('//span[text()="Admin"]');
         this.addBtn = page.locator('//button[normalize-space()="Add"]');
         this.userRole = page.locator('//label[text()="User Role"]//ancestor::div[contains(@class,"oxd-grid-item--gutters")]//descendant::div[@class="oxd-select-wrapper"]')
-
-        //Admin > Job
-        this.jobMenu = page.locator('.oxd-topbar-body-nav-tab-item')
-        this.jobTitles = page.locator('Job Titles')
-        this.addJobTitleBtn = page.locator('//button[text()=" Add "]')
-        this.jobTitleInput = page.locator('[class="oxd-input oxd-input--active"]')
-        this.saveJobTitleBtn = page.locator('[class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space"]')
-        
 
     }
     async visit() {
@@ -47,13 +33,6 @@ export default class AdminMenuPage {
         await this.adminMenu.click();
         await this.addBtn.click();
         await this.userRole.click();
-    }
-    async createJobTitle() {
-        await this.jobMenu.click()
-        await this.jobTitles.click()
-        await this.addJobTitleBtn.click()
-        await this.jobTitleInput.fill('Automation Test')
-        await this.saveJobTitleBtn.click()
     }
 
 

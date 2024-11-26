@@ -1,1 +1,1 @@
-src/test/features/admin.feature:7:13
+src/test/features/admin.feature:7

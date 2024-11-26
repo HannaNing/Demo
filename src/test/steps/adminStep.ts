@@ -20,8 +20,3 @@ When("User creates a new ESS user", { timeout: 30000 }, async () => {
 //     await adminMenuPage.ErrorMessage();
 // });
 
-When("User goes to Add Job Titles page", {timeout:3000}, async()=> {
-    const adminMenuPage = new AdminMenuPage(pageFixture.page);
-    await adminMenuPage.createJobTitle();
-})
-

@@ -22,4 +22,3 @@ OrangeHRM project is automated by using Playwright,Cucumber framwork and Typescr
    - index.html
 
 
-# OrangeHRM

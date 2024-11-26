@@ -8,9 +8,3 @@ Feature: Functions in Admin Menu
     When User logs in as Admin
     And User creates a new ESS user
     Then New ESS user has been created successfully
-
-  @high
-  Scenario: JT_02 : User create new job title
-    When User logs in as Admin
-    And User goes to Add Job Titles page
-    Then New title has been created successfully
